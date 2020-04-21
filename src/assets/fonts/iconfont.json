@@ -1,0 +1,79 @@
+{
+  "id": "1747805",
+  "name": "sxs-admin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8339597",
+      "name": "hamburger",
+      "font_class": "hamburger",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "6178519",
+      "name": "office icon_excel",
+      "font_class": "officeicon-",
+      "unicode": "e75d",
+      "unicode_decimal": 59229
+    },
+    {
+      "icon_id": "6995556",
+      "name": "office icon_excel co",
+      "font_class": "officeicon_excelco",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "8269991",
+      "name": "73 Office Icons",
+      "font_class": "BRAINSTORM",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "9880081",
+      "name": "icon ／ office",
+      "font_class": "iconoffice",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "10783094",
+      "name": "office icon_excel",
+      "font_class": "officeicon-1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13881049",
+      "name": "西红柿.SVG",
+      "font_class": "xihongshiSVG",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "13881050",
+      "name": "荷花.SVG",
+      "font_class": "hehuaSVG",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "13881051",
+      "name": "配送车.SVG",
+      "font_class": "peisongcheSVG",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "13881052",
+      "name": "菜篮.SVG",
+      "font_class": "cailanSVG",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    }
+  ]
+}
