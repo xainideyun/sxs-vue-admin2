@@ -14,11 +14,11 @@ export const setTitle = function (title) {
  * @param { String } key
  */
 export const setToken = (token, key = 'token') => {
-  if (token) {
+  // if (token) {
     cookie.set(key, token)
-  } else {
-    cookie.remove(key)
-  }
+  // } else {
+  //   cookie.remove(key)
+  // }
 }
 
 /**

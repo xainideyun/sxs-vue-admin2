@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>商品详情页</h1>
-    <h3>{{ Date.now() }}</h3>
+    <h1>系统设置</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'goodDetail'
+  name: 'sys'
 }
 </script>
 

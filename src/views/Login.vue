@@ -92,7 +92,7 @@ export default {
         if (valid) {
           this.loading = true
           const res = await this.$store.dispatch('user/login', this.loginForm)
-          this.$router.push({ path: this.redirect || '/' })
+          this.$router.push({ path: this.redirect || '/' }, onComplete => { }, onAbort => { })
           this.loading = false
           this.$message.success('登录成功')
         } else {

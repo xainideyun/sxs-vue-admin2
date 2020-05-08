@@ -17,13 +17,13 @@ export const getUserinfo = () => {
 
 export function getRole() {
   return Mock.mock({
-    'a|boolean': true,
-    'b|boolean': true,
-    'c|boolean': true,
-    'd|boolean': true,
-    'e|boolean': true,
-    'f|boolean': true,
-    'g|boolean': true,
-    'h|boolean': true
+    'home': true,
+    'about|1': true,
+    'good|1': true,
+    'goodList|1': true,
+    'goodDetail|1': true,
+    'settings|1': true,
+    'sys|1': true,
+    'user|1': true
   })
 }

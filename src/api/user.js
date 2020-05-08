@@ -16,6 +16,6 @@ export const getUserinfo = () => {
 
 export function getRole() {
   return axios.request({
-    url: '/api/auth/role'
+    url: '/api/role'
   })
 }

@@ -1,10 +1,14 @@
 import {
   login,
-  getUserinfo
+  getUserinfo,
+  getRole
 } from '@/api/user' // 用户信息的api接口
 import {
   setToken
 } from '@/lib/util' // 系统业务相关的公共方法
+import router, {
+  resetRouter
+} from '@/router'
 
 /**
  * 保存用户信息的store
@@ -65,23 +69,28 @@ export default {
     getUser({
       commit
     }) {
-      return new Promise((resolve, reject) => {
-        getUserinfo().then(res => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const res = await getUserinfo()
           commit('SET_USERINFO', res)
-          resolve(res)
-        }).catch(err => {
+          const roles = await getRole()
+          resolve(roles)
+        } catch (err) {
           reject(err)
-        })
+        }
       })
     },
     /**
      * 登出
      * @param { store } 提交
      */
-    logout({ commit }) {
+    logout({
+      commit
+    }) {
       return new Promise(resolve => {
         setToken('')
         commit('LOGOUT')
+        resetRouter()
         resolve()
       })
     }

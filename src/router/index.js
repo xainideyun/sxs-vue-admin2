@@ -11,11 +11,19 @@ import store from '@/store'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({
+
+const createRouter = () => new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  scrollBehavior: () => ({ y: 0 }),
   routes
 })
+
+const router = createRouter()
+
+export function resetRouter() {
+  const newRouter = createRouter()
+  router.matcher = newRouter.matcher
+}
 
 router.beforeEach(function (to, from, next) {
   NProgress.start()
@@ -34,11 +42,15 @@ router.beforeEach(function (to, from, next) {
         // 否则获取用户信息后跳转
         store.dispatch('user/getUser')
           .then(res => {
-            next()
+            // 此处获得用户信息后，需要根据用户信息确定菜单权限
+            store.dispatch('app/generateRoutes', res).then(res => {
+              router.addRoutes(res)
+              next({ ...to, replace: true })
+            })
           }).catch(err => {
             // 如果获取信息时出错，则退出系统，然后跳转到登录页
             store.dispatch('user/logout').then(res => {
-              next('/login')
+              next(`/login?redirect=${to.path}`)
               NProgress.done()
             })
           })
